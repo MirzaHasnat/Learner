@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Registration</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    &zwnj; 
+    <div class="formbody">
+        <div class="form login" id="login">
+            <table>
+                <caption>Login</caption>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" placeholder="Username"/></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" placeholder="Password"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button>Login</button>
+                        <a href="#SignUp" onclick="show_signup()" style="font-size:12px;">Don't Have an account?</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="form signup hide" id="signup">
+            <table>
+                <caption>Sign Up</caption>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" placeholder="Username"/></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" placeholder="Email"/></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" placeholder="Password"/></td>
+                </tr>
+                <tr>
+                    <td>Working Role</td>
+                    <td><select name="wrole">
+                        <option value="developer">Developer</option>
+                        <option value="tester">Tester</option>
+                        <option value="manager">manager</option>
+                        <option value="analysts">Analysts</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Team</td>
+                    <td><input type="text" name="team" placeholder="Team*"/></td>
+                </tr>
+                <tr>
+                    <td>Manager</td>
+                    <td><input type="text" name="manager" placeholder="Manager*"/></td>
+                </tr>
+                <tr>
+                    <td>Backup Person</td>
+                    <td><input type="text" name="backupp" placeholder="Backup Person*"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button>Signup</button>
+                        <a href="#SignUp" onclick="show_login()" style="font-size:12px;">Already have an account?</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        let login = document.getElementById("login")
+        let signup = document.getElementById("signup")
+        function show_signup(){
+            login.classList.remove("show")
+            login.classList.add("hide")
+            signup.classList.remove("hide")
+            signup.classList.add("show")
+        }
+        function show_login(){
+            signup.classList.remove("show")
+            signup.classList.add("hide")
+            login.classList.remove("hide")
+            login.classList.add("show")
+        }
+    </script>
+</body>
+</html>
